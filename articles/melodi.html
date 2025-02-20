@@ -79,7 +79,7 @@ jeu de données, date de dernière mise à jour, nombre de lignes…</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/get_catalog.html">get_catalog</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Request all catalog : https://api.insee.fr/melodi/catalog/all</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 76 × 10</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 75 × 10</span></span></span>
 <span><span class="co">#&gt;    identifier                 title_content subtitle_content description_content</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>              </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> DD_CNA_AGREGATS            Produit Inté… Comptes nationa… <span style="color: #949494;">"</span>Le produit intéri…</span></span>
@@ -92,7 +92,7 @@ jeu de données, date de dernière mise à jour, nombre de lignes…</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> DD_CNA_PATRIMOINE_BRANCHES Comptes de p… Comptes nationa… <span style="color: #949494;">"</span>Le patrimoine nat…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> DD_CNA_TEE                 Tableau écon… Comptes nationa… <span style="color: #949494;">"</span>Le tableau économ…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> DD_EEC_ANNUEL              Activité, em… Enquête Emploi … <span style="color: #949494;">"</span>Les données sont …</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 66 more rows</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 65 more rows</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 6 more variables: abstract_content &lt;chr&gt;, temporal_startPeriod &lt;date&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   temporal_endPeriod &lt;date&gt;, modified &lt;date&gt;, numObservations &lt;int&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   numSeries &lt;int&gt;</span></span></span></code></pre></div>
@@ -120,7 +120,7 @@ jeu de données dans son intégralité, non filtré.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_all_data.html">get_all_data</a></span><span class="op">(</span>ds_name <span class="op">=</span> <span class="st">"DS_POPULATIONS_REFERENCE"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Request file : https://api.insee.fr/melodi/file/DS_POPULATIONS_REFERENCE/DS_POPULATIONS_REFERENCE_CSV_FR</span></span>
-<span><span class="co">#&gt; Downloaded path : /tmp/RtmpxOsXCd/DS_POPULATIONS_REFERENCE.zip</span></span>
+<span><span class="co">#&gt; Downloaded path : /tmp/RtmpOSXUqP/DS_POPULATIONS_REFERENCE.zip</span></span>
 <span><span class="co">#&gt; Remove downloaded files</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span>
