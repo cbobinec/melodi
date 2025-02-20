@@ -37,6 +37,14 @@
       <ul class="navbar-nav me-auto">
 <li class="active nav-item"><a class="nav-link" href="../articles/melodi.html">Get started</a></li>
 <li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
+<li><a class="dropdown-item" href="../articles/A-filtre-explorateur.html">Filtrer à l'aide de l’explorateur</a></li>
+    <li><a class="dropdown-item" href="../articles/B-donnees-locales.html">Filtrer par critère géographique</a></li>
+    <li><a class="dropdown-item" href="../articles/C-usage_backoffice.html">Autres usages catalogue</a></li>
+  </ul>
+</li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul>
 <ul class="navbar-nav">
@@ -77,25 +85,7 @@ requêtage.</p>
 <p>Une séléction de métadonnées est également proposé : description du
 jeu de données, date de dernière mise à jour, nombre de lignes…</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_catalog.html">get_catalog</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Request all catalog : https://api.insee.fr/melodi/catalog/all</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 75 × 10</span></span></span>
-<span><span class="co">#&gt;    identifier                 title_content subtitle_content description_content</span></span>
-<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>              </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> DD_CNA_AGREGATS            Produit Inté… Comptes nationa… <span style="color: #949494;">"</span>Le produit intéri…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> DD_CNA_APU                 Comptes des … Comptes nationa… <span style="color: #949494;">"</span>Le secteur instit…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> DD_CNA_BRANCHES            Activité des… Comptes nationa… <span style="color: #949494;">"</span>Données annuelles…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> DD_CNA_CONSO_MENAGES_COIC… Consommation… Comptes nationa… <span style="color: #949494;">"</span>Données annuelles…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> DD_CNA_CONSO_MENAGES_PROD… Consommation… Comptes nationa… <span style="color: #949494;">"</span>Données annuelles…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> DD_CNA_ECH_EXT             Échanges ext… Comptes nationa… <span style="color: #949494;">"</span>Données annuelles…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> DD_CNA_PATRIMOINE          Comptes de p… Comptes nationa… <span style="color: #949494;">"</span>Le patrimoine nat…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> DD_CNA_PATRIMOINE_BRANCHES Comptes de p… Comptes nationa… <span style="color: #949494;">"</span>Le patrimoine nat…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> DD_CNA_TEE                 Tableau écon… Comptes nationa… <span style="color: #949494;">"</span>Le tableau économ…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> DD_EEC_ANNUEL              Activité, em… Enquête Emploi … <span style="color: #949494;">"</span>Les données sont …</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 65 more rows</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 6 more variables: abstract_content &lt;chr&gt;, temporal_startPeriod &lt;date&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   temporal_endPeriod &lt;date&gt;, modified &lt;date&gt;, numObservations &lt;int&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   numSeries &lt;int&gt;</span></span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_catalog.html">get_catalog</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="obtenir-des-informations-sur-un-jeu-de-données">Obtenir des informations sur un jeu de données<a class="anchor" aria-label="anchor" href="#obtenir-des-informations-sur-un-jeu-de-donn%C3%A9es"></a>
@@ -106,10 +96,7 @@ recensement de la population. L’identifiant du jeu de données est
 <p>A l’aide de cet identifiant, <code><a href="../reference/get_metadata.html">get_metadata()</a></code> permet
 d’obtenir les métadonnées associées à ce jeu de données</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">ds</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_metadata.html">get_metadata</a></span><span class="op">(</span>ds_name <span class="op">=</span> <span class="st">"DS_POPULATIONS_REFERENCE"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Request dataset : https://api.insee.fr/melodi/catalog/DS_POPULATIONS_REFERENCE</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/message.html" class="external-link">message</a></span><span class="op">(</span><span class="st">"Date de dernière mise à jour : "</span>, <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="va">ds</span><span class="op">$</span><span class="va">modified</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Date de dernière mise à jour : 2024-12-19</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">ds_metadata</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_metadata.html">get_metadata</a></span><span class="op">(</span>ds_name <span class="op">=</span> <span class="st">"DS_POPULATIONS_REFERENCE"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="charger-entièrement-les-données-dun-jeu-de-données">Charger entièrement les données d’un jeu de données<a class="anchor" aria-label="anchor" href="#charger-enti%C3%A8rement-les-donn%C3%A9es-dun-jeu-de-donn%C3%A9es"></a>
@@ -118,19 +105,7 @@ d’obtenir les métadonnées associées à ce jeu de données</p>
 <code><a href="../reference/get_all_data.html">get_all_data()</a></code> permet d’obtenir sous forme de data.frame le
 jeu de données dans son intégralité, non filtré.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_all_data.html">get_all_data</a></span><span class="op">(</span>ds_name <span class="op">=</span> <span class="st">"DS_POPULATIONS_REFERENCE"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Request file : https://api.insee.fr/melodi/file/DS_POPULATIONS_REFERENCE/DS_POPULATIONS_REFERENCE_CSV_FR</span></span>
-<span><span class="co">#&gt; Downloaded path : /tmp/RtmpOSXUqP/DS_POPULATIONS_REFERENCE.zip</span></span>
-<span><span class="co">#&gt; Remove downloaded files</span></span>
-<span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span>
-<span><span class="co">#&gt;     GEO GEO_OBJECT FREQ POPREF_MEASURE TIME_PERIOD OBS_VALUE</span></span>
-<span><span class="co">#&gt; 1 15089        COM    A           PTOT        2016       470</span></span>
-<span><span class="co">#&gt; 2 15163        COM    A           PTOT        2016      1104</span></span>
-<span><span class="co">#&gt; 3 16190        COM    A           PMUN        2016       194</span></span>
-<span><span class="co">#&gt; 4 14563        COM    A           PMUN        2016       422</span></span>
-<span><span class="co">#&gt; 5 16185        COM    A           PTOT        2016       164</span></span>
-<span><span class="co">#&gt; 6 16082        COM    A           PCAP        2016        15</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_all_data.html">get_all_data</a></span><span class="op">(</span>ds_name <span class="op">=</span> <span class="st">"DS_POPULATIONS_REFERENCE"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="filtrer-ses-données-à-laide-de-lexplorateur">Filtrer ses données à l’aide de l’explorateur<a class="anchor" aria-label="anchor" href="#filtrer-ses-donn%C3%A9es-%C3%A0-laide-de-lexplorateur"></a>
