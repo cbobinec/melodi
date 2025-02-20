@@ -9,3 +9,5 @@
 ^docs$
 ^Meta$
 pkgdown
+^.github
+^\.github$
