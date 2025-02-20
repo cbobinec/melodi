@@ -1,6 +1,12 @@
 # melodi <a href="https://pole-odl.gitlab-pages.insee.fr/melodi/"><img src="man/figures/logo.png" align="right" height="139" alt="melodi website" /></a>
 
-Package facilitant l'utilisation des données et métadonnées diffusé par l'Insee via [Melodi](https://catalogue-donnees.insee.fr)
+<!-- badges: start -->
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+[![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![CRAN status](https://www.r-pkg.org/badges/version/doremifasol)](https://cran.r-project.org/package=doremifasol)
+<!-- badges: end -->
+
+Package facilitant l'utilisation des données et métadonnées diffusé par l'Insee sur [le catalogue de données Melodi](https://catalogue-donnees.insee.fr)
 
 ## Installation
 
