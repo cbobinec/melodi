@@ -10,7 +10,7 @@
 #' @export
 #'
 #' @examples
-#' get_all_data("DS_POPULATIONS_REFERENCE")
+#' data <- get_all_data("DS_TICM_PRATIQUES")
 get_all_data <- function(
     ds_name,
     base_url_melodi = "https://api.insee.fr/melodi",

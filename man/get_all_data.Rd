@@ -30,5 +30,5 @@ data.frame with data
 Get all data from a dataset
 }
 \examples{
-get_all_data("DS_POPULATIONS_REFERENCE")
+data <- get_all_data("DS_TICM_PRATIQUES")
 }
