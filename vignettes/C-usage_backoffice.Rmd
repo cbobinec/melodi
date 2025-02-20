@@ -54,7 +54,7 @@ L'ensemble des fichiers produits et publiés par Melodi sont accessibles via l'A
 
 La fonction `get_file` permet de récupérer et télécharger un fichier par son nom, et le renommer au besoin.
 
-```{r excel}
+```{r excel, eval = FALSE}
 fic_xlsx1 <- get_file(
   ds_name = "DS_EC_DECES",
   file_name = "T1_DECES_JOUR_DEP_REG_FR",

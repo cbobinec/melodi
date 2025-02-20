@@ -26,7 +26,7 @@ Pour cela, il est nécessaire de passer en paramètre le code géographique (`GE
 
 **Exemple :** je souhaite filtrer le jeu de données sur les capacités en hébergement touristique (identifiant `DS_TOUR_CAP`) pour le département de Loire-Atlantique uniquement (`GEO=44` et `GEO_OBJECT=DEP`)
 
-```{r get_local_data}
+```{r get_local_data, eval = FALSE}
 get_local_data(
   ds_name = "DS_POPULATIONS_REFERENCE",
   geo = "44",
@@ -42,14 +42,12 @@ Pour les jeux de données proposant une diffusion au niveau communal, la fonctio
 
 **Exemple :** je souhaite filtrer le jeu de données sur les populations de référence issues du recensement de la population (identifiant `DS_POPULATIONS_REFERENCE`) sur toutes les communes de Nantes Métropole (`GEO=244400404` et `GEO_OBJECT=EPCI`)
 
-```{r get_local_data_by_com}
+```{r get_local_data_by_com, eval = FALSE}
 my_local_data_by_com <- get_local_data_by_com(
   ds_name = "DS_POPULATIONS_REFERENCE",
   geo = "244400404",
   geo_object = "EPCI"
 )
-
-summary(my_local_data_by_com)
 ```
 
 
