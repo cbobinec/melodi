@@ -16,7 +16,7 @@ Installer la dernière version stable depuis github :
 remotes::install_github("cbobinec/melodi", build_vignettes = TRUE)
 ```
 
-Installer la dernière version stable en interne Insee :
+(pour les agents Insee uniquement) installer la dernière version stable :
 ```R
 install.packages("melodi", repos = "https://nexus.insee.fr/repository/r-public/")
 ```
